@@ -11,14 +11,14 @@ public class Main {
 
         do {
             pantalla.print("Fila: ");
-            int x = Integer.parseInt(teclado.nextLine());
+            int fila = Integer.parseInt(teclado.nextLine());
 
             pantalla.print("Columna: ");
-            int y = Integer.parseInt(teclado.nextLine());
+            int columna = Integer.parseInt(teclado.nextLine());
 
-            result = juego.jugar(x, y);
+            result = juego.jugar(fila, columna);
 
-            pantalla.println('\n'+juego.generarTablero());
+            pantalla.println('\n' + juego.generarTablero());
 
         } while(result.equals("Aun no hay un ganador!"));
 
