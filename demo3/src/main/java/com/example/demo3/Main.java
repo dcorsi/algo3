@@ -11,13 +11,20 @@ public class Main extends Application {
 
     private static Stage escenario;
 
-    public static void setStageTitle (String titulo){
+    private static Modelo modelo;
+
+    public static void setStageTitle(String titulo) {
         escenario.setTitle(titulo);
+    }
+
+    public static Modelo getModelo() {
+        return modelo;
     }
 
     @Override
     public void start(Stage stage) throws IOException {
         escenario = stage;
+        modelo = new Modelo();
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("vista.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setScene(scene);

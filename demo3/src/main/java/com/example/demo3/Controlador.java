@@ -18,8 +18,8 @@ public class Controlador {
 
     private Modelo modelo;
 
-    public void initialize(){
-        this.modelo = new Modelo();
+    public void initialize() {
+        this.modelo = Main.getModelo();
         Main.setStageTitle(modelo.obtenerNombreApp());
         operarBtn.setText(modelo.obtenerNombreOp());
     }
